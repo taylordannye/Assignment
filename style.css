@@ -1,0 +1,547 @@
+:root{
+    /* Colors */
+    --white: #FFFF;
+    --color-primary: #e4052e21;
+    --color-primary-lighter: rgba(46, 29, 156, 0.03);
+    --color-secondary: #2e1d9c;
+    --color-secondary-dark: #1C144F;
+    --color-secondary-light: rgba(46,29,156, 0.3);
+    --red: #e4052d;
+    --violet: #2e1d9c;
+    --darkvoild: #1C144F;
+    --black: #000;
+    --bg: rgb(46,29,156);
+    /* Font */
+    --default-font: 'Montserrat';
+}
+
+/* Apply to whole page screen */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body customization */
+body{
+    font-family: var(--default-font);
+    background-image: url('/assets/dots-block-red-big.png');
+    background-position: left;
+    background-position-y: 10px;
+    background-size: 70px;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+}
+
+/* Dot Shaped Red */
+.dot-shaped-red{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+}
+.dot-shaped-red img{
+    width: 70px;
+}
+
+/* Header Style */
+header{
+    max-width: 100%;
+    height: 4rem;
+    margin: 0 auto;
+    background: transparent;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 3fr 0.3fr;
+    grid-template-rows: 100%;
+}
+
+/* Header Logo Style */
+header .header-logo{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+header .header-logo img{
+    width: 100px;
+}
+
+/* Header Menu Contents */
+header .menu-items{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+header .menu-items .first-contents{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header .menu-items .first-contents a, img{
+    color: var(--color-secondary-dark);
+    text-decoration: none;
+    margin: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: 0.1s;
+}
+
+header .menu-items .first-contents #search{
+    width: 15px;
+}
+
+header .menu-items .first-contents button{
+    border: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--white);
+    padding: 10px 30px;
+    background: var(--red);
+    border-radius: 4px;
+    margin: 20px;
+    cursor: pointer;
+    font-family: var(--default-font);
+}
+
+header .menu-items .first-contents button:hover{
+    background: var(--color-secondary-dark);
+    transition: 0.7s ease;
+}
+
+header .hamburger-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 30px;
+    display: none;
+}
+
+/* Making Header Responsive */
+@media (max-width: 992px) {
+    header .menu-items .first-contents a{
+        font-size: 0.7rem;
+    }
+
+    header .menu-items .first-contents button{
+        color: var(--white);
+        font-size: 0.6rem;
+        background: var(--color-secondary);
+        margin: 5px;
+    }
+}
+
+@media (max-width: 828px) {
+    header .menu-items .first-contents button{
+        display: none;
+    }
+}
+
+@media (max-width: 656px) {
+    header .menu-items .first-contents a{
+        margin: 10px;
+    }
+}
+
+@media (max-width: 637px) {
+    header .menu-items .first-contents a{
+        margin: 10px;
+        font-size: 0.8rem;
+    }
+
+    header .menu-items .first-contents #remove{
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    header{
+        grid-template-columns: 4fr 0.5fr;
+    }
+
+    header .header-logo{
+        justify-content: flex-start;
+        padding-left: 12%;
+    }
+
+    header  .hamburger-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    header .menu-items{
+        position: absolute;
+        width: 100%;
+        right: 0%;
+        height: fit-content;
+        margin: 0 auto;
+        padding: 10px 0 10px 0;
+        box-sizing: border;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        transition: 0.3s;
+        transform: translate(0,-250px);
+        background: var(--white);
+        box-shadow: 0 0 2px rgba(0, 0, 0, .3);
+    }
+
+    header .menu-items.show{
+        transform: translate(0,20%);
+    }
+
+    header .menu-items .first-contents{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    header .menu-items .first-contents #remove{
+        display: block;
+    }
+}
+
+/* Hero Section Styles */
+.hero{
+    width: 100%;
+    height: 400px;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hero .texts{
+    width: 400px;
+    align-self: center;
+    justify-self: center;
+    margin-left: 100px;
+    margin-top: -40px;
+}
+
+.hero .texts h1{
+    font-size: 35.04px;
+    line-height: 45px;
+    color: var(--color-secondary-dark);
+}
+
+.hero .texts .rectangle{
+    background: var(--color-primary);
+    padding: 9px 8.5rem;
+    z-index: -1;
+    position: absolute;
+    top: 33.8%;
+}
+
+.hero .texts p{
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--black);
+    font-weight: 500;
+}
+
+.hero .hero-img{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-image: url('/assets/dots-block-blue.png');
+    background-position: left;
+    background-position-y: 52px;
+    background-size: 300px;
+    background-repeat: no-repeat;
+}
+
+.hero .hero-img img{
+    width: 580px;
+}
+
+.hero .hero-img #dot-shape-blue{
+    display: none;
+}
+
+.hero .texts .btn-container{
+    margin-top: 20px;
+}
+
+.hero .texts .btn-container button{
+    border: none;
+    background: var(--bg);
+    padding: 15px 30px;
+    color: var(--white);
+    font-family: var(--default-font);
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hero .texts .btn-container button:hover{
+    background: var(--black);
+    transition: 0.7s ease;
+}
+
+/* Feature Styling */
+.feature{
+    margin: 0px auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-inside{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(6, 0.5fr);
+    grid-template-rows: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-inside img{
+    width: 150px;
+}
+
+.container-inside #resize{
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Feature Responsiveness */
+@media (max-width: 1190px) {
+    .hero .hero-img img{
+        width: 400px;
+    }
+
+    .hero .hero-img{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        background-image: url('/assets/dots-block-blue.png');
+        background-position: left;
+        background-position-y: 70px;
+        background-size: 220px;
+        background-repeat: no-repeat;
+    }
+
+    .hero .texts h1{
+        font-size: 30.04px;
+        line-height: 32px;
+        color: var(--color-secondary-dark);
+    }
+
+    .hero .texts .rectangle{
+        display: none;
+    }
+
+    .hero .texts .btn-container button{
+        border: none;
+        background: var(--bg);
+        padding: 10px 30px;
+        color: var(--white);
+        font-family: var(--default-font);
+        font-weight: 500;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    body{
+        font-family: var(--default-font);
+        background-image: url('/assets/dots-block-red-big.png');
+        background-position: left;
+        background-position-y: 0px;
+        background-size: 50px;
+        background-repeat: no-repeat;
+    }
+
+    .container-inside{
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(3, 0.5fr);
+        grid-template-rows: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #remove-f, .remove-f{
+        display: none;
+    }
+
+    .feature{
+        margin: -70px auto;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1000px) {
+    .hero .hero-img img{
+        width: 380px;
+    }
+    
+    .hero .hero-img{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        background-image: url('/assets/dots-block-blue.png');
+        background-position: left;
+        background-position-y: 70px;
+        background-size: 200px;
+        background-repeat: no-repeat;
+    }
+
+    .hero .texts{
+        width: 300px;
+        align-self: center;
+        justify-self: center;
+        margin-left: 50px;
+        margin-top: -40px;
+    }
+
+    .hero .texts h1{
+        font-size: 25.04px;
+        line-height: 29px;
+        color: var(--color-secondary-dark);
+    }
+
+    .hero .texts .rectangle{
+        display: none;
+    }
+    
+    .hero .texts p{
+        margin-top: 20px;
+        font-size: 11px;
+        color: var(--black);
+        font-weight: 500;
+    }
+
+    .hero .texts .btn-container button{
+        border: none;
+        background: var(--bg);
+        padding: 10px 30px;
+        color: var(--white);
+        font-family: var(--default-font);
+        font-weight: 500;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    body{
+        font-family: var(--default-font);
+        background-image: url('/assets/dots-block-red-big.png');
+        background-position: left;
+        background-position-y: 0px;
+        background-size: 50px;
+        background-repeat: no-repeat;
+    }
+
+    .container-inside{
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(3, 0.5fr);
+        grid-template-rows: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #remove-f, .remove-f{
+        display: none;
+    }
+
+    .feature{
+        margin: -70px auto;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 828px) {
+    body{
+        font-family: var(--default-font);
+        background-size: 0px;
+    }
+}
+
+@media (max-width: 790px) {
+    .container-inside{
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(2, 0.5fr);
+        grid-template-rows: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .feature5{
+        display: none;
+    }
+
+    .hero .hero-img img{
+        width: 320px;
+    }
+
+    .hero .texts h1{
+        font-size: 22.04px;
+        line-height: 29px;
+        color: var(--color-secondary-dark);
+    }
+}
+
+@media (max-width: 700px) {
+    .hero .hero-img img{
+        width: 300px;
+    }
+
+    .hero .hero-img{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        background-image: url('/assets/dots-block-blue.png');
+        background-position: left;
+        background-position-y: 100px;
+        background-size: 200px;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: 650px) {
+    body{
+        overflow-x: hidden;
+    }
+
+    .hero{
+        width: 100%;
+        height: 400px;
+        margin: 0px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .hero .hero-img{
+        display: none;
+    }
+
+    .hero .texts{
+        width: 100%;
+        text-align: center;
+        margin-top: -40px;
+        margin-left: 40px;
+    }
+
+    .hero .texts h1{
+        font-size: 35px;
+        line-height: 40px;
+    }
+}

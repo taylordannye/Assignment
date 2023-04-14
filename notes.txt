@@ -1,0 +1,25 @@
+About Services Portfolio Client Contact
+
+
+UI & UX design for your digital products.
+We're a digital agency focused on UI & UX design. We also offer auditing and optimization of websites based on WordPress.
+
+Let's talk about your project.
+
+Font: Montserrat (available on google fonts)
+
+Colors
+  color-primary: #e4052d;
+  color-primary-lighter: rgba(46, 29, 156, 0.03);
+
+  color-secondary: #2e1d9c;
+  color-secondary-dark: #1C144F;
+  color-secondary-light: rgba(46,29,156, 0.3);
+
+
+
+red: #e4052d
+violet: #2e1d9c
+dark voild: 1C144F
+bg: rgb(46,29,156)
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page Title -->
+    <title>Kava Internship Assignment</title>
+    <!-- Styling Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Header Logo -->
+        <div class="header-logo">
+            <a href="#"><img src="/assets/PerfectPixels.svg" alt="logo"></a>
+        </div>
+        <!-- Menu Items -->
+        <div class="menu-items">
+            <div class="first-contents">
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#" id="remove">Portfolio</a>
+                <a href="#" id="remove">Clients</a>
+                <a href="#">Contact</a>
+                <img src="/assets/search.png" alt="search" class="search-img" id="search">
+                <button>Get Quote</button>
+            </div>
+        </div>
+        <!-- Hamburger -->
+        <div class="hamburger-container" id="main" onclick="hamburgerdisplay()"><span id="menu">&#9776;</span></div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="texts">
+            <h1>UX &amp; UI design for <br> your digital products.</h1>
+            <div class="rectangle bkg"></div>
+            <p>We're a digital agency focused on <b>UI & UX design</b>. <br> We also offer auditing and optimization of websites based on <b>WordPress</b>.</p>
+            <div class="btn-container">
+                <button>Let's talk about your project &#8594; <!-- <img src="/assets/Vector.png" alt="right_arrow"> --></button>
+            </div>
+        </div>
+        <div class="hero-img">
+        <!-- Hero-Img -->
+        <img src="/assets/Software-Developer 1.png" alt="hero">
+        </div>
+    </section>
+    <section class="feature">
+        <div class="container-inside">
+        <!-- Image1 -->
+        <div class="feature1">
+            <img src="/assets/th.png" alt="img1">
+        </div>
+        <!-- Image 2 -->
+        <div class="feature2">
+            <img id="resize" src="/assets/th1.png" alt="img2">
+        </div>
+        <!-- Image 3 -->
+        <div class="feature3">
+            <img src="/assets/th2.png" alt="img3">
+        </div>
+        <!-- Image4 -->
+        <div class="feature4">
+            <img id="remove-f" src="/assets/th.png" alt="img4">
+        </div>
+        <!-- Image 5 -->
+        <div class="feature5">
+            <img id="resize" class="remove-f clear" src="/assets/th1.png" alt="img5">
+        </div>
+        <!-- Image 6 -->
+        <div class="feature6">
+            <img id="remove-f" src="/assets/th2.png" alt="img6">
+        </div>
+    </div>
+    </section>
+    <script>
+        function hamburgerdisplay() {
+            document.querySelector(".menu-items").classList.toggle("show");
+        }
+    </script>
+</body>
+</html>
